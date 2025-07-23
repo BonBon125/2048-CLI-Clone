@@ -363,8 +363,9 @@ class Program
             if (i == 0)
             {
                 // First line of display
-                Console.WriteLine(String.Concat(Enumerable.Repeat(" ", 5 + 5 * 4)));
+                Console.Write(String.Concat(Enumerable.Repeat(" ", 5 + 5 * 4)));
                 Set_Console_Background_Colour(-2);
+                Console.Write("\n");
             }
 
             for (int k = 0; k < 3; k++)
@@ -407,8 +408,9 @@ class Program
                 Set_Console_Background_Colour(-2);
             }
             Set_Console_Background_Colour();
-            Console.WriteLine(String.Concat(Enumerable.Repeat(" ", 5 + 5 * 4)));
+            Console.Write(String.Concat(Enumerable.Repeat(" ", 5 + 5 * 4)));
             Set_Console_Background_Colour(-2);
+            Console.Write("\n");
         }
         Set_Console_Background_Colour(-2);
 
