@@ -12,3 +12,4 @@
 /home/ron/dev/c-sharp-dev/2048/obj/Debug/net9.0/2048.pdb
 /home/ron/dev/c-sharp-dev/2048/obj/Debug/net9.0/2048.genruntimeconfig.cache
 /home/ron/dev/c-sharp-dev/2048/obj/Debug/net9.0/ref/2048.dll
+/home/ron/dev/c-sharp-dev/2048/obj/Debug/net9.0/2048.sourcelink.json

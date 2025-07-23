@@ -39,7 +39,7 @@ class Program
 
         int new_block_index = Select_Random_Num(1, num_empty_blocks);
 
-        int[] potential_block_values = {2, 4}
+        int[] potential_block_values = {2, 4};
 
         int random_block_value;
 
