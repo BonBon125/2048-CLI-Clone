@@ -386,6 +386,7 @@ class Program
                         Console.Write(current_block_val.ToString().PadRight(5));
                         Set_Console_Background_Colour();
                         Console.Write(" ");
+                        Set_Console_Background_Colour(-2);
                     }
 
                     else
@@ -394,11 +395,13 @@ class Program
                         Console.Write("     ");
                         Set_Console_Background_Colour();
                         Console.Write(" ");
+                        Set_Console_Background_Colour(-2);
                     }
 
                     if (j == 3)
                     {
                         Console.Write("\n");
+                        Set_Console_Background_Colour(-2);
                     }
                 }
                 Set_Console_Background_Colour(-2);
