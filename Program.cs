@@ -402,12 +402,13 @@ class Program
                         Console.Write("\n");
                     }
                 }
+                Set_Console_Background_Colour(-2);
             }
             Set_Console_Background_Colour();
             Console.WriteLine(String.Concat(Enumerable.Repeat(" ", 5 + 5 * 4)));
             Set_Console_Background_Colour(-2);
-
         }
+        Set_Console_Background_Colour(-2);
 
     }
 }
