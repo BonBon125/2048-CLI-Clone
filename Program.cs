@@ -232,6 +232,7 @@ class Program
         // Add_Random_New_Block(board);
         // int[,] board = { { 2, 2, 0, 0 }, { 4, 2, 0, 0 }, { 0, 2, 0, 0 }, { 4, 2, 0, 0 } };
         Console.WriteLine("Make a move using W A S D");
+        Console.WriteLine("Quit using Q");
         while (!Game_Over(board))
         {
             Display_Board(board);
@@ -240,8 +241,11 @@ class Program
 
             char player_move = Console.ReadKey(true).KeyChar;
 
-            // string player_move = Console.ReadLine();
-            if (player_move != 'w' && player_move != 'a' && player_move != 's' && player_move != 'd')
+            if (player_move == 'q')
+            {
+                break;
+            }
+            else if (player_move != 'w' && player_move != 'a' && player_move != 's' && player_move != 'd')
             {
                 continue;
             }
