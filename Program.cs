@@ -308,6 +308,9 @@ class Program
 
         switch (block_value)
         {
+            case -2:
+                Console.BackgroundColor = ConsoleColor.Black;
+                break;
             case -1:
                 Console.BackgroundColor = ConsoleColor.White;
                 break;
@@ -361,10 +364,12 @@ class Program
             {
                 // First line of display
                 Console.WriteLine(String.Concat(Enumerable.Repeat(" ", 5 + 5 * 4)));
+                Set_Console_Background_Colour(-2);
             }
 
             for (int k = 0; k < 3; k++)
             {
+                Set_Console_Background_Colour();
                 for (int j = 0; j < 4; j++)
                 {
 
@@ -393,12 +398,14 @@ class Program
 
                     if (j == 3)
                     {
-                        Set_Console_Background_Colour();
+                        Set_Console_Background_Colour(-2);
                         Console.Write("\n");
                     }
                 }
             }
+            Set_Console_Background_Colour();
             Console.WriteLine(String.Concat(Enumerable.Repeat(" ", 5 + 5 * 4)));
+            Set_Console_Background_Colour(-2);
 
         }
 
