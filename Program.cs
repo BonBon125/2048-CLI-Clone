@@ -400,8 +400,8 @@ class Program
 
                     if (j == 3)
                     {
-                        Console.Write("\n");
                         Set_Console_Background_Colour(-2);
+                        Console.Write("\n");
                     }
                 }
                 Set_Console_Background_Colour(-2);
