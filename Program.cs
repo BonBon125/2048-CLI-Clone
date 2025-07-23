@@ -394,6 +394,7 @@ class Program
                         Console.Write("     ");
                         Set_Console_Background_Colour();
                         Console.Write(" ");
+                        Set_Console_Background_Colour(-2);
                     }
 
                     if (j == 3)
