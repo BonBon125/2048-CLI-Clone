@@ -39,7 +39,7 @@ class Program
 
         int new_block_index = Select_Random_Num(1, num_empty_blocks);
 
-        int[] potential_block_values = {2, 4};
+        int[] potential_block_values = { 2, 4 };
 
         int random_block_value;
 
@@ -181,13 +181,6 @@ class Program
 
     static void Process_Run(int[] arr, ref int score)
     {
-
-        foreach (var item in arr)
-        {
-            Console.Write(item);
-
-        }
-        Console.WriteLine();
 
         // combine numbers that are equal
         for (int i = 0; i < 4; i++)
@@ -400,6 +393,7 @@ class Program
 
                     if (j == 3)
                     {
+                        Set_Console_Background_Colour();
                         Console.Write("\n");
                     }
                 }
