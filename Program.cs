@@ -27,30 +27,38 @@ class Program
 
     }
 
-    static int Select_Random_Num(int min, int max)
+    static int Select_Random_Num(int max, int min = 1)
     {
         Random rnd = new Random();
         return rnd.Next(min, max + 1);
+    }
+
+    static int Select_Random_Block_Value()
+    {
+        int max_random_probability = 100;
+        int probability_of_2 = 90;
+        int random_probability = Select_Random_Num(max_random_probability);
+
+        if (random_probability < probability_of_2)
+        {
+            return 2;
+        }
+        else
+        {
+            return 4;
+        }
+
     }
 
     static void Add_Random_New_Block(int[,] board)
     {
         int num_empty_blocks = Calculate_Empty_Blocks(board);
 
-        int new_block_index = Select_Random_Num(1, num_empty_blocks);
+        int new_block_index = Select_Random_Num(num_empty_blocks);
 
-        int[] potential_block_values = { 2, 4 };
+        int new_block_value = Select_Random_Block_Value();
 
-        int random_block_value;
 
-        if (Select_Random_Num(1, 100) > 10)
-        {
-            random_block_value = 2;
-        }
-        else
-        {
-            random_block_value = 4;
-        }
 
         int nth_empty_block = 0;
 
@@ -65,7 +73,7 @@ class Program
 
                 if (nth_empty_block == new_block_index)
                 {
-                    board[i, j] = random_block_value;
+                    board[i, j] = new_block_value;
                     return;
                 }
             }
@@ -223,14 +231,12 @@ class Program
     static void Play_Game()
     {
         int score = 0;
-        // int[,] board = { { 0, 0, 0, 0 }, { 0, 0, 0, 0 }, { 0, 0, 0, 0 }, { 0, 0, 0, 0 } };
-        int[,] board = { { 16, 0, 0, 0 }, { 8, 0, 0, 0 }, { 8, 0, 0, 0 }, { 0, 0, 0, 0 } };
+        int[,] board = { { 0, 0, 0, 0 }, { 0, 0, 0, 0 }, { 0, 0, 0, 0 }, { 0, 0, 0, 0 } };
 
         int num_moves = 0;
 
-        // Add_Random_New_Block(board);
-        // Add_Random_New_Block(board);
-        // int[,] board = { { 2, 2, 0, 0 }, { 4, 2, 0, 0 }, { 0, 2, 0, 0 }, { 4, 2, 0, 0 } };
+        Add_Random_New_Block(board);
+        Add_Random_New_Block(board);
         Console.WriteLine("Make a move using W A S D");
         Console.WriteLine("Quit using Q");
         while (!Game_Over(board))
